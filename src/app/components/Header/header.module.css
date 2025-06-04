@@ -18,7 +18,7 @@
   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 }
 
-a:hover {
+.header__flex.a:hover {
   color: orange;
   text-decoration: underline;
 }
