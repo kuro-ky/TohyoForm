@@ -70,7 +70,7 @@
 /* 横線単体 */
 .horizontal_bar {
   height: 100px;
-  width: 100%;
+  width: 150%;
   top: 70%;
   left: 0;
   border-right: 100px;

@@ -1,22 +1,15 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import { Op } from "../opning/opning";
+import styles from "./main.module.css";
 
 export default function Main() {
-  const [opAnime, setOpAnime] = useState(true);
-
-  useEffect(() => {
-    const OpTimer = setTimeout(() => {
-      setOpAnime(false);
-    }, 6000);
-
-    return () => clearTimeout(OpTimer);
-  }, []);
   return (
     <>
-      {opAnime && <Op />}
-      <p>こんにちは</p>
+      <img src="仮画像.png" alt="すまいるさん仮画像"></img>
+      <div className={styles.main_font}>
+        あなたの1票で、すまいるさんが決まる！
+      </div>
+      <a>投票する</a>
+      <div>ああああああああああああああああああああああああ</div>
+      <div>いいいいいいいいいいいいいいいいいいいいいいいい</div>
     </>
   );
 }
