@@ -68,10 +68,7 @@
   padding: 0 20px;
   border: none;
   border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -165,4 +162,90 @@ a.secondary {
   .logo {
     filter: invert();
   }
+}
+
+/* 横線のアニメーション */
+@keyframes fade-in {
+  from {
+    transform: translateX(-100%);
+  }
+  30%,
+  50% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+    transform: scale(10);
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* 縦線のアニメ */
+@keyframes fade-in_tate {
+  0% {
+    transform: translateY(-100%);
+  }
+  30%,
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    /* これすぐに消える状態だからあとでコード書いて消す */
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(10);
+  }
+}
+
+@keyframes back_d {
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.back_color {
+  background-color: yellow;
+  height: 5000px;
+  padding: 20px;
+  animation: back_d 8s ease-in-out forwards;
+}
+
+/* .border_tate {
+  border-right: 100px;
+  animation: fade-in 5s ease-in-out forwards;
+  background-color: aliceblue;
+  color: red;
+} */
+
+/* 縦線 */
+.vertical_bar {
+  position: absolute;
+  height: 100%;
+  width: 100px;
+  left: 70%;
+  top: 0;
+  animation: fade-in_tate 5s ease-in-out forwards;
+  background-color: aliceblue;
+  color: red;
+  animation-fill-mode: forwards;
+  writing-mode: vertical-lr;
+  font-size: 60px;
+  overflow: hidden;
+}
+
+/* 横線単体 */
+.horizontal_bar {
+  height: 100px;
+  width: 100%;
+  top: 70%;
+  left: 0;
+  border-right: 100px;
+  animation: fade-in 5s ease-in-out forwards;
+  background-color: aliceblue;
+  color: blue;
+  animation-fill-mode: forwards;
+  position: absolute;
+  font-size: 75px;
 }
