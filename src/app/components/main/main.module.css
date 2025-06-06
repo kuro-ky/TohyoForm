@@ -1,7 +1,101 @@
+/* 見出し */
 .main_font {
   height: 50px;
   background-color: #f8b500;
-  font-size: large;
+  font-size: xx-large;
   font-weight: 800;
   text-align: center;
+}
+/*見出しの文字 */
+.main_font_a {
+  height: 30px;
+  font-size: xx-large;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* スクロール関連 */
+@keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.scroll_infinity {
+  position: relative;
+  background: black;
+}
+.scroll_infinity__wrap {
+  display: flex;
+  overflow: hidden;
+}
+.scroll_infinity__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+
+  animation: infinity-scroll-left 360s infinite linear 0.5s both;
+}
+.scroll_infinity__item {
+  width: calc(100vw / 3);
+}
+.scroll_infinity__item > img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.font {
+  text-align: center;
+}
+
+/* すまいるさん総選挙のロゴ */
+.logo {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+/* 背景画像 */
+.back {
+  background-image: url("オレンジ背景.jpg");
+  background-size: cover;
+}
+
+.list_leyout {
+  justify-content: center;
+  display: flex;
+}
+/* エントリーした人の配置 */
+.list_style {
+  list-style: none;
+  margin-left: 20px;
+}
+
+/* 投票するボタン */
+.button {
+  border-radius: 20px;
+  background: #f6d927;
+  /* position: relative;
+  display: flex; */
+  margin: 0 auto;
+  max-width: 260px;
+  font-size: x-large;
+  font-weight: 500;
+  padding: 10px 25px;
+  transition: 0.3s;
+}
+/* map関数の親要素 */
+.container {
+  display: flex;
+  flex-wrap: wrap; /* 折り返ししたい場合。不要なら外してOK */
+  gap: 16px; /* 子要素の間にスペースを入れたい場合 */
+  justify-content: center; /* 必要に応じて中央寄せ */
 }

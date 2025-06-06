@@ -5,7 +5,7 @@ export function Header() {
       <div className={styles.header__flex}>
         <ul>
           <a href="/">TOP</a>
-          <a>投票する</a>
+          <a href="#">投票する</a>
           <a>結果発表</a>
         </ul>
       </div>
