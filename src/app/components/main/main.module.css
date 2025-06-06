@@ -1,10 +1,12 @@
 /* 見出し */
 .main_font {
-  height: 50px;
-  background-color: #f8b500;
-  font-size: xx-large;
+  height: 100px;
+  background-color: red;
+  font-size: 45px;
   font-weight: 800;
   text-align: center;
+  color: white;
+  padding: 15px;
 }
 /*見出しの文字 */
 .main_font_a {
@@ -37,10 +39,10 @@
   list-style: none;
   padding: 0;
 
-  animation: infinity-scroll-left 360s infinite linear 0.5s both;
+  animation: infinity-scroll-left 360s infinite linear 1s both;
 }
 .scroll_infinity__item {
-  width: calc(100vw / 3);
+  width: calc(100vw / 2);
 }
 .scroll_infinity__item > img {
   width: 100%;
@@ -48,14 +50,25 @@
   opacity: 0.8;
 }
 
+/* メインフォント */
 .font {
   text-align: center;
+  font-size: medium;
+  font-weight: 800;
+  padding-top: 10px;
+  padding: 5px;
 }
 
+/* 各見出し */
+.midashi_font {
+  text-decoration: underline solid brown;
+  font-size: xx-large;
+  font-weight: 800;
+}
 /* すまいるさん総選挙のロゴ */
 .logo {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -65,7 +78,8 @@
 
 /* 背景画像 */
 .back {
-  background-image: url("オレンジ背景.jpg");
+  /* background-image: url("オレンジ背景.jpg"); */
+  background-color: #ebe9d6;
   background-size: cover;
 }
 
@@ -79,18 +93,24 @@
   margin-left: 20px;
 }
 
+.img_style {
+  width: 155px;
+  height: 300px;
+}
+
 /* 投票するボタン */
 .button {
   border-radius: 20px;
-  background: #f6d927;
+  background: red;
   /* position: relative;
   display: flex; */
   margin: 0 auto;
   max-width: 260px;
   font-size: x-large;
-  font-weight: 500;
+  font-weight: 800;
   padding: 10px 25px;
   transition: 0.3s;
+  color: white;
 }
 /* map関数の親要素 */
 .container {

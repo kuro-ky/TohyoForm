@@ -9,7 +9,7 @@ export default function Main() {
         <div className={styles.scroll_infinity}>
           <img
             className={styles.logo}
-            src="すまいるさんロゴ透過.png"
+            src="すまいるさんロゴ透過ふちアリ.png"
             alt="すまいるさんのロゴ"
           />
           <div className={styles.scroll_infinity__wrap}>
@@ -109,9 +109,8 @@ export default function Main() {
         </div>
 
         <div className={styles.main_font}>
-          あなたの1票で、ベストオブ「すまいるさん」が決まる！
+          あなたの1票で「ベスト・オブ・すまいるさん」が決まる！
         </div>
-
         <div className={styles.font}>
           全国のガイアから素敵な「すまいるさん」が大集合！
         </div>
@@ -121,7 +120,8 @@ export default function Main() {
         <div className={styles.font}>投票期間は〇月〇日～★月★日</div>
         <div className={styles.font}>結果発表は▽月▽日を予定！！</div>
 
-        <a className={styles.main_font}>投票する</a>
+        <a className={styles.midashi_font}>投票する</a>
+
         <div className={styles.main_font}>社員部門</div>
         <div className={styles.container}>
           {entrySmile.map((smilesan, index) => (
@@ -129,8 +129,11 @@ export default function Main() {
               <li className={styles.list_style}>
                 エントリーナンバー{smilesan.no}　
               </li>
-              <li className={styles.list_style}>{smilesan.store}</li>
+              <li className={styles.list_style}>{smilesan.store}店</li>
               <li className={styles.list_style}>{smilesan.name}さん</li>
+              <img className={styles.img_style} src={smilesan.URL} />
+              <div></div>
+
               <button className={styles.button}>投票する！</button>
             </div>
           ))}

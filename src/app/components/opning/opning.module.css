@@ -38,7 +38,7 @@
 }
 
 .back_color {
-  background-color: yellow;
+  background-color: red;
   height: 1000px;
   padding: 20px;
   animation: back_d 8s ease-in-out forwards;
@@ -70,8 +70,8 @@
 /* 横線単体 */
 .horizontal_bar {
   height: 100px;
-  width: 150%;
-  top: 70%;
+  width: 100%;
+  top: 50%;
   left: 0;
   border-right: 100px;
   animation: fade-in 5s ease-in-out forwards;
