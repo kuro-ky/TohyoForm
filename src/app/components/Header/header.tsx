@@ -4,9 +4,11 @@ export function Header() {
     <>
       <div className={styles.header__flex}>
         <ul>
-          <a href="/">TOP</a>
-          <a href="#">投票する</a>
-          <a>結果発表</a>
+          <nav>
+            <a href="/">TOP</a>
+            <a href="#Tohyo">投票する</a>
+            <a href="#Kekka">結果発表</a>
+          </nav>
         </ul>
       </div>
     </>

@@ -61,9 +61,11 @@
 
 /* 各見出し */
 .midashi_font {
-  text-decoration: underline solid brown;
-  font-size: xx-large;
+  border-left: 10px solid red;
+  padding: 5px;
+  font-size: 45px;
   font-weight: 800;
+  margin: 15px;
 }
 /* すまいるさん総選挙のロゴ */
 .logo {
@@ -111,11 +113,30 @@
   padding: 10px 25px;
   transition: 0.3s;
   color: white;
+  justify-content: center;
 }
+
+/* .button div {
+  font-size: 20;
+  justify-content: center;
+  display: grid;
+} */
+
 /* map関数の親要素 */
 .container {
   display: flex;
-  flex-wrap: wrap; /* 折り返ししたい場合。不要なら外してOK */
-  gap: 16px; /* 子要素の間にスペースを入れたい場合 */
-  justify-content: center; /* 必要に応じて中央寄せ */
+  flex-wrap: wrap;
+  gap: 100px; /* 子要素の間のスペース調整 */
+  justify-content: center;
+}
+
+/* 特定要素をふわっとさせる関連 */
+.fuwatto_fade_in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.is_visible {
+  opacity: 1;
+  transform: translateY(0);
 }

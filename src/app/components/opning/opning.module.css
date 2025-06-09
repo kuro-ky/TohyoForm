@@ -38,10 +38,13 @@
 }
 
 .back_color {
+  position: relative;
   background-color: red;
   height: 1000px;
+  min-height: 100%;
   padding: 20px;
   animation: back_d 8s ease-in-out forwards;
+  z-index: 0;
 }
 
 /* .border_tate {
@@ -80,4 +83,18 @@
   animation-fill-mode: forwards;
   position: absolute;
   font-size: 75px;
+}
+
+.back_color button {
+  position: fixed;
+  right: 10%;
+  bottom: 30px;
+  z-index: 100;
+  padding: 15px 25px;
+  color: red;
+  background-color: aliceblue;
+  border-radius: 15px;
+  border-width: 0;
+  font-weight: 700;
+  font-size: large;
 }
