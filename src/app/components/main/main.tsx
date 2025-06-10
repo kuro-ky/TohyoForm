@@ -1,10 +1,22 @@
 import styles from "./main.module.css";
 import { entrySmile } from "../deta/deta";
 import { useEffect, useRef, useState } from "react";
+import { Dela_Gothic_One } from "next/font/google";
+import { Modal } from "../modal/modal";
+
+const delaGothicOne = Dela_Gothic_One({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export default function Main() {
   const fadeRef = useRef(null);
   const [fuwatto, Setfuwatto] = useState(false);
+  const [pushButton, setPushButton] = useState(false); //モーダルを表示させる用
+
+  const handlePush = () => {
+    setPushButton(true);
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -17,7 +29,7 @@ export default function Main() {
         });
       },
       {
-        threshold: 0.1, // 10% が表示されたとき
+        threshold: 0.3, // 10% が表示されたとき
       }
     );
 
@@ -172,12 +184,7 @@ export default function Main() {
             <br />
           </div>
 
-          <div
-            className={`${styles.fuwatto_fade_in} ${
-              fuwatto ? styles.is_visible : ""
-            }`}
-            ref={fadeRef}
-          >
+          <div>
             {/* <h1>社員部門</h1> */}
             <div className={styles.container}>
               {entrySmile.map((smilesan, index) => (
@@ -190,7 +197,7 @@ export default function Main() {
                   <img className={styles.img_style} src={smilesan.URL} />
                   <div></div>
 
-                  <button className={styles.button}>
+                  <button className={styles.button} onClick={handlePush}>
                     <div
                       style={{
                         fontSize: 15,
@@ -205,6 +212,7 @@ export default function Main() {
                 </div>
               ))}
             </div>
+            {pushButton && <Modal />}
           </div>
         </section>
         <br></br>
@@ -212,11 +220,29 @@ export default function Main() {
 
         <section id="Kekka">
           <div className={styles.midashi_font}>結果発表について</div>
-          <div className={styles.font}>結果発表日時：▽月▽日(予定)</div>
-          <div className={styles.font}>ホスピタリティコンテスト内で発表！</div>
+          <div
+            className={`${styles.fuwatto_fade_in} ${
+              fuwatto ? styles.is_visible : ""
+            }  ${styles.result} `}
+            ref={fadeRef}
+          >
+            発表日時：▽月▽日(予定)
+            <div className={styles.result}>
+              ホスピタリティコンテスト内で発表！
+            </div>
+          </div>
         </section>
 
-        <h3>沢山の投票お待ちしております！！</h3>
+        <br></br>
+        <br></br>
+        <div
+          className={`${styles.fuwatto_fade_in} ${
+            fuwatto ? styles.is_visible : ""
+          } ${styles.fotter} ${delaGothicOne.className}`}
+          ref={fadeRef}
+        >
+          たくさんの投票お待ちしております！！
+        </div>
       </div>
     </>
   );
