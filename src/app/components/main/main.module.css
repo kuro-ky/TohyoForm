@@ -140,3 +140,18 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+.result {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: 800;
+  padding-top: 10px;
+  padding: 5px;
+}
+
+.fotter {
+  color: red;
+  /* font-weight: 400; */
+  font-size: 50px;
+  text-align: center;
+}

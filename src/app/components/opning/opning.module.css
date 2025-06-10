@@ -68,6 +68,7 @@
   writing-mode: vertical-lr;
   font-size: 60px;
   overflow: hidden;
+  z-index: 50;
 }
 
 /* 横線単体 */
@@ -83,6 +84,7 @@
   animation-fill-mode: forwards;
   position: absolute;
   font-size: 75px;
+  z-index: 40;
 }
 
 .back_color button {
@@ -94,7 +96,7 @@
   color: red;
   background-color: aliceblue;
   border-radius: 15px;
-  border-width: 0;
+  border-width: 2 solid black;
   font-weight: 700;
   font-size: large;
 }

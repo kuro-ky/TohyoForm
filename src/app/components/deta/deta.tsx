@@ -10,7 +10,7 @@ export const entrySmile = [
     no: 2,
     store: "ガイア花見川",
     name: "黒川結衣",
-    URL: "smile/cooking_hoajyao.png",
+    URL: "/smile/cooking_hoajyao.png",
   },
   {
     no: 3,
