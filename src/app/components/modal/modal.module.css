@@ -1,0 +1,69 @@
+/* モーダル全体の枠 */
+.modalContent {
+  background-color: #ebe9d6;
+  padding: 5px 20px 60px 20px;
+  /* margin: 300px auto; */
+  margin-left: 40%;
+  width: 300px;
+  border-radius: 8px;
+  position: fixed;
+  z-index: 1001;
+  border: 5px solid black;
+  top: 30%;
+}
+
+/* 黒塗りの背景 */
+.overlay {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* 店名・名前の部分 */
+.font {
+  color: rgb(5, 27, 134);
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  /* justify-content: center; */
+}
+
+.smileImg {
+  width: 250px;
+}
+/* 投票する！の部分 */
+.ok {
+  border-radius: 20px;
+  background: red;
+  /* position: relative;
+  display: flex; */
+  margin: 0 auto;
+  max-width: 260px;
+  font-size: x-large;
+  font-weight: 800;
+  padding: 10px 25px;
+  transition: 0.3s;
+  color: white;
+  justify-content: center;
+}
+/* ×ボタン */
+.batsu {
+  position: absolute;
+  top: -6px;
+  right: 0;
+  font-size: 40px;
+  color: darkgray;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.cancel {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}

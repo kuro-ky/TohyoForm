@@ -12,10 +12,30 @@ const delaGothicOne = Dela_Gothic_One({
 export default function Main() {
   const fadeRef = useRef(null);
   const [fuwatto, Setfuwatto] = useState(false);
-  const [pushButton, setPushButton] = useState(false); //モーダルを表示させる用
+  const [showModal, setShowModal] = useState(false); //モーダルを表示させる用
+  const [ModalContents, setModalContents] = useState<{
+    no: number;
+    name: string;
+    store: string;
+    URL: string;
+    comments: string;
+  } | null>(null);
+  //  ↑ボタンを押したときの記録用
 
-  const handlePush = () => {
-    setPushButton(true);
+  const handleModal = (smile: {
+    no: number;
+    name: string;
+    store: string;
+    URL: string;
+    comments: string;
+  }) => {
+    setModalContents(smile);
+    setShowModal(true);
+  };
+
+  // モーダルを閉じる用
+  const closemodal = () => {
+    setShowModal(false);
   };
 
   useEffect(() => {
@@ -56,9 +76,6 @@ export default function Main() {
           />
           <div className={styles.scroll_infinity__wrap}>
             <ul className={styles.scroll_infinity__list}>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
               <li className={styles.scroll_infinity__item}>
                 <img src="仮画像.png" />
               </li>
@@ -197,8 +214,11 @@ export default function Main() {
                   <img className={styles.img_style} src={smilesan.URL} />
                   <div></div>
 
-                  <button className={styles.button} onClick={handlePush}>
-                    <div
+                  <button
+                    className={styles.button}
+                    onClick={() => handleModal(smilesan)}
+                  >
+                    {/* <div
                       style={{
                         fontSize: 15,
                         justifyContent: "center",
@@ -206,13 +226,16 @@ export default function Main() {
                       }}
                     >
                       {smilesan.name}さんに
-                    </div>
+                    </div> */}
                     <div>投票する！</div>
                   </button>
                 </div>
               ))}
             </div>
-            {pushButton && <Modal />}
+            {/* ModalContents={ModalContents} */}
+            {showModal && ModalContents && (
+              <Modal ModalContents={ModalContents} closemodal={closemodal} />
+            )}
           </div>
         </section>
         <br></br>
