@@ -1,10 +1,12 @@
 .back {
   position: relative;
-  background-color: #ebe9d6;
-  height: 10000px;
   width: 100%;
   z-index: 0;
   text-align: center;
+  background-color: #ebe9d6;
+  background-image: url("投票完了背景.jpg");
+  background-repeat: no-repeat;
+  height: 1000px;
 }
 
 .back a {

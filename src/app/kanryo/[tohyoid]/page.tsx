@@ -28,14 +28,26 @@ export default function TohyoKanryou({
 }: {
   params: Promise<{ tohyoid: Number }>;
 }) {
-  const { reward, isAnimating } = useReward("rewardId", "confetti");
+  const { reward, isAnimating } = useReward("rewardId", "confetti", {
+    angle: 45,
+    position: "absolute",
+  });
+  const { reward: rewardLeft, isAnimating: isAnimatingLeft } = useReward(
+    "rewardLeft",
+    "confetti",
+    {
+      angle: 120,
+      position: "absolute",
+    }
+  );
 
   // Next.jsのエラーが出るので一旦アンラップ（Promseが非同期処理のため、そのまま値を使うと中身がない可能性があるから）
   const unwrap = use(params);
 
   useInterval(() => {
-    if (!isAnimating) {
+    if (!isAnimating || !isAnimatingLeft) {
       reward();
+      rewardLeft();
     }
   });
 
@@ -44,6 +56,7 @@ export default function TohyoKanryou({
 
   return (
     <>
+      <span id="rewardId"></span>
       <div className={classes.back}>
         <div>投票ありがとう！！</div>
         <img src={search?.URL} alt="投票した人の画像"></img>
@@ -51,7 +64,7 @@ export default function TohyoKanryou({
         <br></br>
         <a href="/#Tohyo">他の人にも投票する！</a>
         <a href="/">TOPに戻る</a>
-        <span id="rewardId"></span>
+        <span id="rewardLeft"></span>
       </div>
     </>
   );
