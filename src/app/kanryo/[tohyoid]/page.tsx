@@ -3,6 +3,12 @@ import { useReward } from "react-rewards";
 import { use, useEffect, useRef } from "react";
 import classes from "./page.module.css";
 import { entrySmile } from "@/app/components/deta/deta";
+import { Dela_Gothic_One } from "next/font/google";
+
+const delaGothicOne = Dela_Gothic_One({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 // callbackにはVoid型で() => { if(!isAnimating){reward();}が入っている（これは下で定義済）
 const useInterval = (callback: () => void) => {
@@ -57,7 +63,7 @@ export default function TohyoKanryou({
   return (
     <>
       <span id="rewardId"></span>
-      <div className={classes.back}>
+      <div className={`${classes.back} ${delaGothicOne.className}`}>
         <div>投票ありがとう！！</div>
         <img src={search?.URL} alt="投票した人の画像"></img>
         <br></br>
