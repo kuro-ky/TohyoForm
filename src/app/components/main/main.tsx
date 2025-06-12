@@ -209,7 +209,7 @@ export default function Main() {
                   <li className={styles.list_style}>
                     エントリーナンバー{smilesan.no}　
                   </li>
-                  <li className={styles.list_style}>{smilesan.store}店</li>
+                  <li className={styles.list_style}>{smilesan.store}</li>
                   <li className={styles.list_style}>{smilesan.name}さん</li>
                   <img className={styles.img_style} src={smilesan.URL} />
                   <div></div>

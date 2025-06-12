@@ -6,7 +6,7 @@ export function Op({ stopOpAnime }: { stopOpAnime: () => void }) {
     <>
       <div className={styles.back_color}>
         <button className={styles.button} onClick={stopOpAnime}>
-          Skip
+          Skip▶
         </button>
 
         <div className={styles.vertical_bar}>No.1は誰？</div>
