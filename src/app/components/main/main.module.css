@@ -93,19 +93,20 @@
 .list_style {
   list-style: none;
   margin-left: 20px;
+  text-align: center;
+  /* font-size: medium;
+  font-weight: 300; */
 }
 
-.img_style {
-  width: 155px;
-  height: 300px;
+.movie_style {
+  width: 370px;
 }
 
 /* 投票するボタン */
 .button {
   border-radius: 20px;
   background: red;
-  /* position: relative;
-  display: flex; */
+  display: grid;
   margin: 0 auto;
   max-width: 260px;
   font-size: x-large;

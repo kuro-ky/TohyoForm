@@ -1,7 +1,7 @@
 /* モーダル全体の枠 */
 .modalContent {
   background-color: #ebe9d6;
-  padding: 5px 20px 40px 20px;
+  padding: 20px 15px;
   /* margin: 300px auto; */
   margin: 40%;
   width: 300px;
@@ -33,9 +33,9 @@
   /* justify-content: center; */
 }
 
-.smileImg {
-  width: 250px;
-}
+/* .smileImg {
+  /* width: 250px; 
+} */
 /* 投票する！の部分 */
 .ok {
   border-radius: 20px;
@@ -63,7 +63,7 @@
   position: absolute;
   top: -6px;
   right: 0;
-  font-size: 40px;
+  font-size: 20px;
   color: darkgray;
   padding: 4px 10px;
   cursor: pointer;
@@ -74,6 +74,11 @@
   position: absolute;
   width: 20px;
   height: 20px;
+}
+
+.img_style {
+  width: 155px;
+  height: 300px;
 }
 
 /* モーダルをふわっとだす */

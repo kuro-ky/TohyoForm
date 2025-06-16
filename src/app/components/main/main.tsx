@@ -17,7 +17,7 @@ export default function Main() {
     no: number;
     name: string;
     store: string;
-    URL: string;
+    photo: string;
     comments: string;
   } | null>(null);
   //  ↑ボタンを押したときの記録用
@@ -26,7 +26,7 @@ export default function Main() {
     no: number;
     name: string;
     store: string;
-    URL: string;
+    photo: string;
     comments: string;
   }) => {
     setModalContents(smile);
@@ -49,7 +49,7 @@ export default function Main() {
         });
       },
       {
-        threshold: 0.3, // 10% が表示されたとき
+        threshold: 0.1, // 10% が表示されたとき
       }
     );
 
@@ -183,35 +183,44 @@ export default function Main() {
         </div>
         <div className={styles.font}>投票期間は〇月〇日～★月★日</div>
         <br></br>
-        <br></br>
 
         <section id="Tohyo">
           <div className={styles.midashi_font}>投票する</div>
-          <div
+          <div className={styles.font}>
+            以下の10名からあなたが一番「すまいるさん」だと思う人に投票してください。
+          </div>
+          <div className={styles.font}>
+            何票でも投票可能ですが、1票ずつの投票となります。
+          </div>
+          <br />
+          <br />
+
+          {/* <div
             className={`${styles.fuwatto_fade_in} ${
               fuwatto ? styles.is_visible : ""
             }`}
             ref={fadeRef}
-          >
-            <div className={styles.font}>
-              以下の10名からあなたが一番「すまいるさん」だと思う人に投票してください。
-            </div>
-            <div className={styles.font}>一人何票でも投票可！</div>
-            <br />
-            <br />
-          </div>
-
+          > */}
           <div>
             {/* <h1>社員部門</h1> */}
             <div className={styles.container}>
               {entrySmile.map((smilesan, index) => (
                 <div key={index}>
-                  <li className={styles.list_style}>
-                    エントリーナンバー{smilesan.no}　
+                  <li
+                    className={`${styles.list_style} ${delaGothicOne.className}`}
+                  >
+                    {smilesan.no}.{smilesan.store}
                   </li>
-                  <li className={styles.list_style}>{smilesan.store}</li>
-                  <li className={styles.list_style}>{smilesan.name}さん</li>
-                  <img className={styles.img_style} src={smilesan.URL} />
+                  <li
+                    className={`${styles.list_style} ${delaGothicOne.className}`}
+                  >
+                    {smilesan.name}さん
+                  </li>
+                  <video
+                    controls
+                    className={styles.movie_style}
+                    src={smilesan.URL}
+                  />
                   <div></div>
 
                   <button
@@ -232,11 +241,12 @@ export default function Main() {
                 </div>
               ))}
             </div>
-            {/* ModalContents={ModalContents} */}
-            {showModal && ModalContents && (
-              <Modal ModalContents={ModalContents} closemodal={closemodal} />
-            )}
           </div>
+          {/* ModalContents={ModalContents} */}
+          {showModal && ModalContents && (
+            <Modal ModalContents={ModalContents} closemodal={closemodal} />
+          )}
+          {/* </div> */}
         </section>
         <br></br>
         <br></br>
@@ -258,12 +268,7 @@ export default function Main() {
 
         <br></br>
         <br></br>
-        <div
-          className={`${styles.fuwatto_fade_in} ${
-            fuwatto ? styles.is_visible : ""
-          } ${styles.fotter} ${delaGothicOne.className}`}
-          ref={fadeRef}
-        >
+        <div className={`${styles.fotter} ${delaGothicOne.className}`}>
           たくさんの投票お待ちしております！！
         </div>
       </div>

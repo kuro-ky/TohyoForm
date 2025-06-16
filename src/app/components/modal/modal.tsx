@@ -8,7 +8,7 @@ type modalProps = {
   no: number;
   name: string;
   store: string;
-  URL: string;
+  photo: string;
   comments: string;
 };
 type parentsProps = {
@@ -18,7 +18,6 @@ type parentsProps = {
 
 export function Modal({ ModalContents, closemodal }: parentsProps) {
   const fadeRef = useRef(null);
-  const [modal, setModal] = useState("");
   const [fuwatto, Setfuwatto] = useState(false);
 
   const voteSmile: () => void = () => {
@@ -36,7 +35,7 @@ export function Modal({ ModalContents, closemodal }: parentsProps) {
         });
       },
       {
-        threshold: 0, // 10% が表示されたとき
+        threshold: 0,
       }
     );
 
@@ -62,7 +61,7 @@ export function Modal({ ModalContents, closemodal }: parentsProps) {
             ref={fadeRef}
           >
             <div className={styles.font}>
-              <img className={styles.smileImg} src={ModalContents.URL} />
+              <img src={ModalContents.photo} />
               <div>{ModalContents.store}</div>
               <div>{ModalContents.name}さん</div>
             </div>
