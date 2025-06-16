@@ -1,5 +1,5 @@
 import styles from "./main.module.css";
-import { entrySmile } from "../deta/deta";
+import { entrySmile, haikei } from "../deta/deta";
 import { useEffect, useRef, useState } from "react";
 import { Dela_Gothic_One } from "next/font/google";
 import { Modal } from "../modal/modal";
@@ -76,98 +76,20 @@ export default function Main() {
           />
           <div className={styles.scroll_infinity__wrap}>
             <ul className={styles.scroll_infinity__list}>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
-              <li className={styles.scroll_infinity__item}>
-                <img src="仮画像.png" />
-              </li>
+              {haikei.map((h, index) => (
+                <li className={styles.scroll_infinity__item} key={index}>
+                  <img src={h.back} />
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* <div className={styles.scroll_infinity__wrap}>
+            <ul className={styles.scroll_infinity__list}>
               <li className={styles.scroll_infinity__item}>
                 <img src="仮画像.png" />
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         <div className={styles.main_font}>

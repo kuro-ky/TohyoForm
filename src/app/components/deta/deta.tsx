@@ -92,3 +92,60 @@ export const entrySmile = [
     photo2: "/smile_thankyou/12ptj_sawa.png",
   },
 ];
+
+export const haikei = [
+  {
+    back: "/back/きょうすま.jpg",
+  },
+  {
+    back: "/back/スマイル.jpg",
+  },
+  {
+    back: "/back/藍住.jpg",
+  },
+  {
+    back: "/back/g4600.png",
+  },
+  {
+    back: "/back/すまいるさん.png",
+  },
+  {
+    back: "/back/スマイルさん.png",
+  },
+  {
+    back: "/back/今日スマ.png",
+  },
+  {
+    back: "/back/今日のスマイル(松永副主任).png",
+  },
+  {
+    back: "/back/横手すまいる.png",
+  },
+  {
+    back: "/back/高萩すまいる.png",
+  },
+  {
+    back: "/back/西船すまいる.png",
+  },
+  {
+    back: "/back/南岩国すまいる.png",
+  },
+  {
+    back: "/back/藤原すまいる.png",
+  },
+  {
+    back: "/back/竜ケ崎すまいる.png",
+  },
+  {
+    back: "/back/土山すまいる.png",
+  },
+  {
+    back: "/back/光すまいる.png",
+  },
+  {
+    back: "/back/弘前すまいる.png",
+  },
+  {
+    back: "/back/image483.png",
+  },
+];

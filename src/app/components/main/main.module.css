@@ -38,11 +38,11 @@
   display: flex;
   list-style: none;
   padding: 0;
-
+  float: left;
   animation: infinity-scroll-left 360s infinite linear 1s both;
 }
 .scroll_infinity__item {
-  width: calc(100vw / 2);
+  width: calc(100vw / 4);
 }
 .scroll_infinity__item > img {
   width: 100%;
