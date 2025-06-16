@@ -1,6 +1,6 @@
 "use client";
 import { useReward } from "react-rewards";
-import { use, useEffect, useRef } from "react";
+import { use, useEffect, useRef, useState } from "react";
 import classes from "./page.module.css";
 import { entrySmile } from "@/app/components/deta/deta";
 import { Dela_Gothic_One } from "next/font/google";
@@ -34,6 +34,9 @@ export default function TohyoKanryou({
 }: {
   params: Promise<{ tohyoid: Number }>;
 }) {
+  const fadeRef = useRef(null);
+  const [fuwatto, Setfuwatto] = useState(false);
+
   const { reward, isAnimating } = useReward("rewardId", "confetti", {
     angle: 45,
     position: "absolute",
@@ -42,12 +45,12 @@ export default function TohyoKanryou({
     "rewardLeft",
     "confetti",
     {
-      angle: 120,
+      angle: 110,
       position: "absolute",
     }
   );
 
-  // Next.jsのエラーが出るので一旦アンラップ（Promseが非同期処理のため、そのまま値を使うと中身がない可能性があるから）
+  // Next.jsのエラーが出るので一旦アンラップ（Promiseが非同期処理のため、そのまま値を使うと中身がない可能性があるから）
   const unwrap = use(params);
 
   useInterval(() => {
@@ -60,17 +63,50 @@ export default function TohyoKanryou({
   const _tohyoid = Number(unwrap.tohyoid);
   const search = entrySmile.find((item) => item.no === _tohyoid);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            Setfuwatto(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0,
+      }
+    );
+
+    if (fadeRef.current) {
+      observer.observe(fadeRef.current);
+    }
+
+    return () => {
+      if (fadeRef.current) {
+        observer.unobserve(fadeRef.current);
+      }
+    };
+  }, []);
+
   return (
     <>
-      <span id="rewardId"></span>
-      <div className={`${classes.back} ${delaGothicOne.className}`}>
-        <div>投票ありがとう！！</div>
-        <img src={search?.URL} alt="投票した人の画像"></img>
-        <br></br>
-        <br></br>
-        <a href="/#Tohyo">他の人にも投票する！</a>
-        <a href="/">TOPに戻る</a>
-        <span id="rewardLeft"></span>
+      <div
+        className={`${classes.fuwatto_fade_in} ${
+          fuwatto ? classes.is_visible : ""
+        } `}
+        ref={fadeRef}
+      >
+        <span id="rewardId"></span>
+        <div className={`${classes.back} ${delaGothicOne.className}`}>
+          <div>投票ありがとう！！</div>
+          <img src={search?.photo2} alt="投票した人の画像"></img>
+          <br></br>
+          <br></br>
+          {/* <a href="/#Tohyo">他の人にも投票する！</a> */}
+          <a href="/">TOPに戻る</a>
+          <span id="rewardLeft"></span>
+        </div>
       </div>
     </>
   );
