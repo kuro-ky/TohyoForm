@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./modal.module.css";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 type modalProps = {
   no: number;
@@ -19,9 +20,10 @@ type parentsProps = {
 export function Modal({ ModalContents, closemodal }: parentsProps) {
   const fadeRef = useRef(null);
   const [fuwatto, Setfuwatto] = useState(false);
+  const router = useRouter();
 
   const voteSmile: () => void = () => {
-    window.location.href = `./kanryo/${ModalContents.no}`;
+    router.push(`/kanryo/${ModalContents.no}`);
   };
 
   useEffect(() => {

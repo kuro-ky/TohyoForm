@@ -32,7 +32,7 @@ export const entrySmile = [
     no: 4,
     store: "アイオン稲毛東口店",
     name: "山本 雅之",
-    URL: "/smile_movie/buranko_girl_smile.png",
+    URL: "/smile_movie/15a_yamamoto.mp4",
     comments: "がんばります",
     photo: "/smile/山本.png",
     photo2: "/smile_thankyou/15ptj_yamamoto.png",
