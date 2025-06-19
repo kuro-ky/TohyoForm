@@ -1,9 +1,14 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import styles from "./modal.module.css";
 import React from "react";
 import { useRouter } from "next/navigation";
+
+type modalPosition = {
+  top: number;
+  left: number;
+};
 
 type modalProps = {
   no: number;
@@ -15,9 +20,14 @@ type modalProps = {
 type parentsProps = {
   ModalContents: modalProps;
   closemodal: () => void;
+  modalPosition: modalPosition;
 };
 
-export function Modal({ ModalContents, closemodal }: parentsProps) {
+export function Modal({
+  ModalContents,
+  closemodal,
+  modalPosition,
+}: parentsProps) {
   const fadeRef = useRef(null);
   const [fuwatto, Setfuwatto] = useState(false);
   const router = useRouter();
@@ -55,7 +65,10 @@ export function Modal({ ModalContents, closemodal }: parentsProps) {
   return (
     <>
       <div className={styles.overlay}>
-        <div className={styles.modalContent}>
+        <div
+          className={styles.modalContent}
+          style={{ top: modalPosition.top, left: modalPosition.left }}
+        >
           <div
             className={`${styles.fuwatto_fade_in} ${
               fuwatto ? styles.is_visible : ""

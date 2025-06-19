@@ -3,6 +3,7 @@ import { entrySmile, haikei } from "../deta/deta";
 import { useEffect, useRef, useState } from "react";
 import { Dela_Gothic_One } from "next/font/google";
 import { Modal } from "../modal/modal";
+import classes from "../modal/modal.module.css";
 
 const delaGothicOne = Dela_Gothic_One({
   weight: "400",
@@ -13,6 +14,10 @@ export default function Main() {
   const fadeRef = useRef(null);
   const [fuwatto, Setfuwatto] = useState(false);
   const [showModal, setShowModal] = useState(false); //モーダルを表示させる用
+  const [modalPosition, setModalPosition] = useState<{
+    top: number;
+    left: number;
+  } | null>(null);
   const [ModalContents, setModalContents] = useState<{
     no: number;
     name: string;
@@ -22,13 +27,22 @@ export default function Main() {
   } | null>(null);
   //  ↑ボタンを押したときの記録用
 
-  const handleModal = (smile: {
-    no: number;
-    name: string;
-    store: string;
-    photo: string;
-    comments: string;
-  }) => {
+  const handleModal = (
+    smile: {
+      no: number;
+      name: string;
+      store: string;
+      photo: string;
+      comments: string;
+    },
+    e: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    const position = e.currentTarget.getBoundingClientRect();
+
+    setModalPosition({
+      top: position.bottom + window.scrollY,
+      left: position.left + window.scrollX,
+    });
     setModalContents(smile);
     setShowModal(true);
   };
@@ -147,7 +161,7 @@ export default function Main() {
 
                   <button
                     className={styles.button}
-                    onClick={() => handleModal(smilesan)}
+                    onClick={(e) => handleModal(smilesan, e)}
                   >
                     {/* <div
                       style={{
@@ -165,8 +179,12 @@ export default function Main() {
             </div>
           </div>
           {/* ModalContents={ModalContents} */}
-          {showModal && ModalContents && (
-            <Modal ModalContents={ModalContents} closemodal={closemodal} />
+          {showModal && ModalContents && modalPosition && (
+            <Modal
+              ModalContents={ModalContents}
+              closemodal={closemodal}
+              modalPosition={modalPosition}
+            />
           )}
           {/* </div> */}
         </section>

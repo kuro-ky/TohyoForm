@@ -4,7 +4,7 @@ export const entrySmile = [
     no: 1,
     store: "ガイア富士見台南口店",
     name: "大澤 優太",
-    URL: "/smile_movie/hujimudai_ohsawa.mp4",
+    URL: "/smile_movie/10a_ohsawa.mp4",
     comments: "投票してください！",
     photo: "/smile/大澤.png",
     photo2: "/smile_thankyou/10ptj_ohsawa.png",
@@ -25,7 +25,7 @@ export const entrySmile = [
     name: "熊谷 祐太朗",
     URL: "/smile_movie/09a_kumagai.mp4",
     comments: "光栄です",
-    photo: "/smile_movie/熊谷.png",
+    photo: "/smile/熊谷.png",
     photo2: "/smile_thankyou/09ptj_kumagai.png",
   },
   {

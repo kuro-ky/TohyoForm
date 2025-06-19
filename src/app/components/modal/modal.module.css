@@ -2,15 +2,14 @@
 .modalContent {
   background-color: #ebe9d6;
   padding: 20px 15px;
-  /* margin: 300px auto; */
-  margin: 40%;
-  width: 300px;
+  width: 90%;
+  /* margin: 40%; */
+  max-width: 300px;
   border-radius: 8px;
-  position: sticky;
-
+  position: fixed;
+  transform: translate(-20%, -50%);
   z-index: 1001;
   border: 5px solid black;
-  top: 30%;
 }
 
 /* 黒塗りの背景 */

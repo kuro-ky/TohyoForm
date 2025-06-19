@@ -1,8 +1,9 @@
 /* 見出し */
 .main_font {
-  height: 100px;
+  /* height: 100px; */
   background-color: red;
-  font-size: 45px;
+  /* font-size: 45px; */
+  font-size: 3.125vw;
   font-weight: 800;
   text-align: center;
   color: white;
@@ -69,8 +70,8 @@
 }
 /* すまいるさん総選挙のロゴ */
 .logo {
-  width: 350px;
-  height: 350px;
+  width: 25%;
+  /* height: 350px; */
   position: absolute;
   top: 50%;
   left: 50%;
