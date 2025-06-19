@@ -3,7 +3,6 @@ import { entrySmile, haikei } from "../deta/deta";
 import { useEffect, useRef, useState } from "react";
 import { Dela_Gothic_One } from "next/font/google";
 import { Modal } from "../modal/modal";
-import classes from "../modal/modal.module.css";
 
 const delaGothicOne = Dela_Gothic_One({
   weight: "400",

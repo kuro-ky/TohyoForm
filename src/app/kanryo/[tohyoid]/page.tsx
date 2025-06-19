@@ -103,6 +103,7 @@ export default function TohyoKanryou({
           <img src={search?.photo2} alt="投票した人の画像"></img>
           <br></br>
           <br></br>
+          <br></br>
           {/* <a href="/#Tohyo">他の人にも投票する！</a> */}
           <a href="/">TOPに戻る</a>
           <span id="rewardLeft"></span>

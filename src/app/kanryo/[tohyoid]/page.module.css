@@ -11,9 +11,9 @@
   bottom: 0;
   left: 0;
   right: 0; */
-  height: 100vh;
-  margin: 0; /* マージンをリセット */
-  padding: 0; /* パディングをリセット */
+  height: 120vh;
+  margin: 0;
+  padding: 0;
 }
 
 .back a {
@@ -22,7 +22,7 @@
   border-radius: 12px;
   text-decoration: none;
   transition: 0.3s;
-  margin: 20px;
+  margin-top: 20px;
   text-align: center;
   color: aliceblue;
   font-size: 35px;
@@ -36,7 +36,7 @@
 }
 
 .back div {
-  font-size: 70px;
+  font-size: 6.125vw;
   font-weight: 400;
   color: yellow;
   text-align: center;
@@ -46,7 +46,10 @@
 }
 
 .back img {
-  height: 350px;
+  width: 320px;
+  height: 240px;
+  /* height: 30vh;
+  width: 25vw; */
 }
 
 .fuwatto_fade_in {

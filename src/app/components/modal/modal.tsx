@@ -67,7 +67,10 @@ export function Modal({
       <div className={styles.overlay}>
         <div
           className={styles.modalContent}
-          style={{ top: modalPosition.top, left: modalPosition.left }}
+          style={{
+            top: modalPosition.top + "px",
+            left: modalPosition.left + "px",
+          }}
         >
           <div
             className={`${styles.fuwatto_fade_in} ${

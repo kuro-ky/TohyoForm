@@ -1,19 +1,52 @@
 /* モーダル全体の枠 */
 .modalContent {
   background-color: #ebe9d6;
-  padding: 20px 15px;
+  padding: 20px;
   width: 90%;
   /* margin: 40%; */
+  max-width: 300px;
+  border-radius: 8px;
+  z-index: 1001;
+  border: 5px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  pointer-events: auto;
+  position: fixed;
+
+  transform: translate(-20%, -20%);
+}
+/* .modalContent {
+  background-color: #ebe9d6;
+  padding: 20px 15px;
+  width: 90%;
   max-width: 300px;
   border-radius: 8px;
   position: fixed;
   transform: translate(-20%, -50%);
   z-index: 1001;
   border: 5px solid black;
-}
+} */
 
 /* 黒塗りの背景 */
 .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+  /* overflow: hidden; */
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* .overlay {
   position: fixed;
   top: 0%;
   left: 0%;
@@ -21,7 +54,7 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1000;
-}
+} */
 
 /* 店名・名前の部分 */
 .font {
