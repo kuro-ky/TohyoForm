@@ -3,6 +3,7 @@ import { entrySmile, haikei } from "../deta/deta";
 import { useEffect, useRef, useState } from "react";
 import { Dela_Gothic_One } from "next/font/google";
 import { Modal } from "../modal/modal";
+import Image from "next/image";
 
 const delaGothicOne = Dela_Gothic_One({
   weight: "400",
@@ -91,7 +92,12 @@ export default function Main() {
             <ul className={styles.scroll_infinity__list}>
               {haikei.map((h, index) => (
                 <li className={styles.scroll_infinity__item} key={index}>
-                  <img src={h.back} />
+                  <Image
+                    src={h.back}
+                    alt={"全国のスマイルさん"}
+                    width={500}
+                    height={300}
+                  />
                 </li>
               ))}
             </ul>
