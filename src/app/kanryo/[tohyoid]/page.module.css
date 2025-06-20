@@ -1,12 +1,10 @@
 .back {
   position: absolute;
   width: 100vw;
+  height: 100vh;
   z-index: 0;
   text-align: center;
-  background-color: #ebe9d6;
-  background-image: url("赤舞台大.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+
   /* top: 0;
   bottom: 0;
   left: 0;
@@ -14,6 +12,23 @@
   height: 120vh;
   margin: 0;
   padding: 0;
+}
+@media only screen and (min-width: 981px) {
+  .back {
+    background-color: #ebe9d6;
+    background-image: url("赤舞台大.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .back {
+    background-color: #ebe9d6;
+    background-image: url("スマホ用赤舞台.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .back a {
