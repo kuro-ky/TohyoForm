@@ -80,96 +80,96 @@ export default function Main() {
 
   return (
     <>
-      {/* <div className={styles.window_body}> */}
-      <div className={styles.back}>
-        {/* <img src="ドットオレンジ.jpg" alt="オレンジの背景"　className={styles}></img> */}
-        <div className={styles.scroll_infinity}>
-          <img
-            className={styles.logo}
-            src="すまいるさんロゴ透過ふちアリ.png"
-            alt="すまいるさんのロゴ"
-          />
-          <div className={styles.scroll_infinity__wrap}>
-            <ul className={styles.scroll_infinity__list}>
-              {haikei.map((h, index) => (
-                <li className={styles.scroll_infinity__item} key={index}>
-                  <Image
-                    src={h.back}
-                    alt={"全国のスマイルさん"}
-                    width={500}
-                    height={300}
-                  />
-                </li>
-              ))}
-            </ul>
-          </div>
-          {/* <div className={styles.scroll_infinity__wrap}>
+      <div className={styles.window_body}>
+        <div className={styles.back}>
+          {/* <img src="ドットオレンジ.jpg" alt="オレンジの背景"　className={styles}></img> */}
+          <div className={styles.scroll_infinity}>
+            <img
+              className={styles.logo}
+              src="すまいるさんロゴ透過ふちアリ.png"
+              alt="すまいるさんのロゴ"
+            />
+            <div className={styles.scroll_infinity__wrap}>
+              <ul className={styles.scroll_infinity__list}>
+                {haikei.map((h, index) => (
+                  <li className={styles.scroll_infinity__item} key={index}>
+                    <Image
+                      src={h.back}
+                      alt={"全国のスマイルさん"}
+                      width={500}
+                      height={300}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* <div className={styles.scroll_infinity__wrap}>
             <ul className={styles.scroll_infinity__list}>
               <li className={styles.scroll_infinity__item}>
                 <img src="仮画像.png" />
               </li>
             </ul>
           </div> */}
-        </div>
+          </div>
 
-        <div className={styles.main_font}>
-          あなたの1票で「ベスト・オブ・すまいるさん」が決まる！
-        </div>
-        <br></br>
+          <div className={styles.main_font}>
+            あなたの1票で「ベスト・オブ・すまいるさん」が決まる！
+          </div>
+          <br></br>
 
-        <div className={styles.font}>
-          全国のガイアから素敵な「すまいるさん」が大集合！
-        </div>
-        <div className={styles.font}>
-          予選を勝ち上がった「すまいるさん」の中からグッときた「すまいるさん」に投票してください。
-        </div>
-        <div className={styles.font}>投票期間は〇月〇日～★月★日</div>
-        <br></br>
-
-        <section id="Tohyo">
-          <div className={styles.midashi_font}>投票する</div>
           <div className={styles.font}>
-            以下の10名からあなたが一番「すまいるさん」だと思う人に投票してください。
+            全国のガイアから素敵な「すまいるさん」が大集合！
           </div>
           <div className={styles.font}>
-            何票でも投票可能ですが、1票ずつの投票となります。
+            予選を勝ち上がった「すまいるさん」の中からグッときた「すまいるさん」に投票してください。
           </div>
-          <br />
-          <br />
+          <div className={styles.font}>投票期間は〇月〇日～★月★日</div>
+          <br></br>
 
-          {/* <div
+          <section id="Tohyo">
+            <div className={styles.midashi_font}>投票する</div>
+            <div className={styles.font}>
+              以下の10名からあなたが一番「すまいるさん」だと思う人に投票してください。
+            </div>
+            <div className={styles.font}>
+              何票でも投票可能ですが、1票ずつの投票となります。
+            </div>
+            <br />
+            <br />
+
+            {/* <div
             className={`${styles.fuwatto_fade_in} ${
               fuwatto ? styles.is_visible : ""
             }`}
             ref={fadeRef}
           > */}
-          <div>
-            {/* <h1>社員部門</h1> */}
-            <div className={styles.container}>
-              {entrySmile.map((smilesan, index) => (
-                <div key={index}>
-                  <li
-                    className={`${styles.list_style} ${delaGothicOne.className}`}
-                  >
-                    {smilesan.no}.{smilesan.store}
-                  </li>
-                  <li
-                    className={`${styles.list_style} ${delaGothicOne.className}`}
-                  >
-                    {smilesan.name}さん
-                  </li>
-                  <video
-                    controls
-                    className={styles.movie_style}
-                    src={smilesan.URL}
-                  />
-                  <div></div>
+            <div>
+              {/* <h1>社員部門</h1> */}
+              <div className={styles.container}>
+                {entrySmile.map((smilesan, index) => (
+                  <div key={index}>
+                    <li
+                      className={`${styles.list_style} ${delaGothicOne.className}`}
+                    >
+                      {smilesan.no}.{smilesan.store}
+                    </li>
+                    <li
+                      className={`${styles.list_style} ${delaGothicOne.className}`}
+                    >
+                      {smilesan.name}さん
+                    </li>
+                    <video
+                      controls
+                      className={styles.movie_style}
+                      src={smilesan.URL}
+                    />
+                    <div></div>
 
-                  <button
-                    className={styles.button}
-                    onClick={(e) => handleModal(smilesan, e)}
-                  >
-                    {/* <div
+                    <button
+                      className={styles.button}
+                      onClick={(e) => handleModal(smilesan, e)}
+                    >
+                      {/* <div
                       style={{
                         fontSize: 15,
                         justifyContent: "center",
@@ -178,44 +178,45 @@ export default function Main() {
                     >
                       {smilesan.name}さんに
                     </div> */}
-                    <div>投票する！</div>
-                  </button>
-                </div>
-              ))}
+                      <div>投票する！</div>
+                    </button>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-          {/* ModalContents={ModalContents} */}
-          {showModal && ModalContents && modalPosition && (
-            <Modal
-              ModalContents={ModalContents}
-              closemodal={closemodal}
-              modalPosition={modalPosition}
-            />
-          )}
-          {/* </div> */}
-        </section>
-        <br></br>
-        <br></br>
+            {/* ModalContents={ModalContents} */}
+            {showModal && ModalContents && modalPosition && (
+              <Modal
+                ModalContents={ModalContents}
+                closemodal={closemodal}
+                modalPosition={modalPosition}
+              />
+            )}
+            {/* </div> */}
+          </section>
+          <br></br>
+          <br></br>
 
-        <section id="Kekka">
-          <div className={styles.midashi_font}>結果発表について</div>
-          <div
-            className={`${styles.fuwatto_fade_in} ${
-              fuwatto ? styles.is_visible : ""
-            }  ${styles.result} `}
-            ref={fadeRef}
-          >
-            発表日時：▽月▽日(予定)
-            <div className={styles.result}>
-              ホスピタリティコンテスト内で発表！
+          <section id="Kekka">
+            <div className={styles.midashi_font}>結果発表について</div>
+            <div
+              className={`${styles.fuwatto_fade_in} ${
+                fuwatto ? styles.is_visible : ""
+              }  ${styles.result} `}
+              ref={fadeRef}
+            >
+              発表日時：▽月▽日(予定)
+              <div className={styles.result}>
+                ホスピタリティコンテスト内で発表！
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <br></br>
-        <br></br>
-        <div className={`${styles.fotter} ${delaGothicOne.className}`}>
-          たくさんの投票お待ちしております！！
+          <br></br>
+          <br></br>
+          <div className={`${styles.fotter} ${delaGothicOne.className}`}>
+            たくさんの投票お待ちしております！！
+          </div>
         </div>
       </div>
     </>

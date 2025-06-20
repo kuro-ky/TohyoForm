@@ -33,9 +33,6 @@ export function Modal({
   const router = useRouter();
 
   const voteSmile: () => void = () => {
-    console.log(modalPosition.left);
-    console.log(modalPosition.top);
-
     router.push(`/kanryo/${ModalContents.no}`);
   };
 
@@ -64,6 +61,13 @@ export function Modal({
       }
     };
   }, []);
+
+  // useEffect(()=>{
+  //   document.body.style.overflow="hidden"
+  //   return()=>{
+  //     document.body.style.overflow="auto"
+  //   }
+  // },[])
 
   return (
     <>

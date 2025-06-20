@@ -2,9 +2,9 @@
 .modalContent {
   background-color: #ebe9d6;
   padding: 20px;
-  width: 90%;
+  width: 80%;
   /* margin: 40%; */
-  max-width: 300px;
+  max-width: 400px;
   border-radius: 8px;
   z-index: 1001;
   border: 5px solid black;
@@ -13,7 +13,7 @@
   pointer-events: auto;
   position: fixed;
 
-  transform: translate(-20%, -20%);
+  transform: translate(-24%, -20%);
 }
 /* .modalContent {
   background-color: #ebe9d6;

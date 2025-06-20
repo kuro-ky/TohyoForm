@@ -1,7 +1,8 @@
-/* .window_body {
+.window_body {
   overflow-y: auto;
-  z-index: 0;
-} */
+  position: relative;
+  /* height: 200vh; */
+}
 
 /* 見出し */
 .main_font {
