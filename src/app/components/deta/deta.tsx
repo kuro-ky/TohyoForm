@@ -148,4 +148,13 @@ export const haikei = [
   {
     back: "/back/image483.png",
   },
+  {
+    back: "/back/青森中央すまいる.png",
+  },
+  {
+    back: "/back/秋葉原すまいる.png",
+  },
+  {
+    back: "/back/アクアすまいる.png",
+  },
 ];

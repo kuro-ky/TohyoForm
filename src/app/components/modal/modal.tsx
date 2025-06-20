@@ -33,6 +33,9 @@ export function Modal({
   const router = useRouter();
 
   const voteSmile: () => void = () => {
+    console.log(modalPosition.left);
+    console.log(modalPosition.top);
+
     router.push(`/kanryo/${ModalContents.no}`);
   };
 
@@ -68,7 +71,7 @@ export function Modal({
         <div
           className={styles.modalContent}
           style={{
-            top: modalPosition.top + "px",
+            top: modalPosition.top - 200 + "px",
             left: modalPosition.left + "px",
           }}
         >

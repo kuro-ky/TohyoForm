@@ -80,6 +80,7 @@ export default function Main() {
 
   return (
     <>
+      {/* <div className={styles.window_body}> */}
       <div className={styles.back}>
         {/* <img src="ドットオレンジ.jpg" alt="オレンジの背景"　className={styles}></img> */}
         <div className={styles.scroll_infinity}>
