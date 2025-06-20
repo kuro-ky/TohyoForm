@@ -60,7 +60,13 @@
   writing-mode: vertical-lr;
   font-size: 60px;
   overflow: hidden;
-  z-index: 50;
+  z-index: 39;
+}
+
+@media only screen and (max-width: 400px) {
+  .vertical_bar {
+    left: 60%;
+  }
 }
 
 /* 横線単体 */
@@ -79,18 +85,38 @@
   z-index: 40;
 }
 
+@media only screen and (max-width: 470px) {
+  .horizontal_bar {
+    font-size: 55px;
+  }
+}
+
 .back_color button {
   position: fixed;
-  right: 10%;
   bottom: 10%;
-  width: 10%;
-  height: 12%;
   z-index: 10000;
-  /* padding: 15px 25px; */
   color: red;
   background-color: aliceblue;
-  border-radius: 1vw;
   border-width: 2vw solid black;
   font-weight: 700;
-  font-size: 2.3vw;
+}
+
+@media only screen and (min-width: 981px) {
+  .back_color button {
+    width: 10%;
+    height: 12%;
+    right: 10%;
+    border-radius: 1vw;
+    font-size: 2.3vw;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .back_color button {
+    right: 7%;
+    width: 20%;
+    height: 7%;
+    border-radius: 2vw;
+    font-size: 4.3vw;
+  }
 }

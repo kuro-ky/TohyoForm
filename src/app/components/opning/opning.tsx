@@ -9,8 +9,8 @@ export function Op({ stopOpAnime }: { stopOpAnime: () => void }) {
           Skip▶
         </button>
 
-        <div className={styles.vertical_bar}>No.1は誰？</div>
         <div className={styles.horizontal_bar}>選ばれし10人</div>
+        <div className={styles.vertical_bar}>No.1は誰？</div>
       </div>
     </>
   );

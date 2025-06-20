@@ -8,7 +8,7 @@ import styles from "./page.module.css";
 
 export default function Home() {
   const [opAnime, setOpAnime] = useState(true); //最初のアニメーション表示させる用
-  // const　section1Ref = useRef(null);
+  const section1Ref = useRef(null);
 
   useEffect(() => {
     const OpTimer = setTimeout(() => {
